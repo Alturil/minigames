@@ -11,10 +11,8 @@ body {
             rgb(6,136,0),
             rgb(2,43,0)
     );	
-}
-
-div {
-	box-sizing: border-box;	
+    font-family: 'Fredoka One', cursive;
+    color: white;
 }
 
 main {
@@ -25,18 +23,16 @@ main {
 	height: 100%;
 }
 
-h1 {
-	color: white;
+h1 {	
 	font-weight: normal;
-	font-size: 5rem;
-	font-family: 'Fredoka One', cursive;
+	font-size: 5rem;	
 	margin: 0;
 }
 
 #light {
 	border: 6px solid rgba(0,0,0,0.5);
-	width: 300px;
-	height: 300px;
+	width: 200px;
+	height: 200px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -56,15 +52,13 @@ h1 {
 
 div[class^="button"] {
 	border: 6px solid rgba(0,0,0,0.5);
-	width: 3em;
-	height: 3em;
+	width: 2em;
+	height: 2em;
 	margin: 0 1em;
 	padding: 0.5em;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	font-family: 'Fredoka One', cursive;
-	color: white;
+	justify-content: center;	
 	text-shadow: 0 0 1px black, 0 0 1px black;
 }
 .button-red		{ background-color: red }

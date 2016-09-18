@@ -1,12 +1,16 @@
 $(document).ready(function(){
-	
+
+// <global variables>
 var availableClasses = [ 'colour-red', 'colour-yellow', 'colour-blue' ];
+var currentColour;
+var score;
+var time;
+var timer;
+// </global variables>
 
-function changeColourClass(newClass){			
-	$('#light').attr('class', newClass);	
-}
-
-function getRandomNumber(current) {
+// <functions>
+function getRandomNumber(current)
+{
 	var random = current;
 	while (random == current) {
 		random = Math.floor(Math.random() * (availableClasses.length) );
@@ -14,7 +18,50 @@ function getRandomNumber(current) {
 	return random;
 }
 
+function changeColourClass(newClass)
+{			
+	$('#light').attr('class', newClass);
+}
 
+function setNewColour()
+{	
+	currentColour = getRandomNumber(currentColour);	
+	changeColourClass(availableClasses[currentColour]);
+	$('#light').html(currentColour);
+}
+
+function updateUI()
+{
+	$('#score').html(score);
+	$('#time').html(time);
+	$('#score').html(score);
+}
+
+function verifyHit(input)
+{
+	if ( input == currentColour )
+	{
+		score++;
+		updateUI();
+	}
+}
+
+function countDown()
+{
+	if ( time > 0 )
+	{
+		time--;
+		updateUI();
+	}	
+	if (time == 0)
+	{
+		clearInterval(timer);
+		alert("Game over!");
+	}
+}
+// </functions>
+
+// Controls!
 $(document).keydown(function(e) {		
    switch (e.which) {
    case 65: // A key
@@ -30,33 +77,17 @@ $(document).keydown(function(e) {
 	setNewColour();
 });
 
-function setNewColour()
-{	
-	currentColour = getRandomNumber(currentColour);	
-	changeColourClass(availableClasses[currentColour]);
-	$('#light').html(currentColour);
-}
 
-function verifyHit(input)
+function start()
 {
-	if ( input == currentColour )
-	{
-		score +=1;
-		$('#score').html(score);
-	}
-	turn++;
-	$('#time').html(turn);
+	score = 0;
+	currentColour = getRandomNumber(null);
+	setNewColour();	
+	time = 30;	
+	timer = setInterval(countDown,1000);
+	updateUI();
 }
 
-// Start
-
-var score = 0;
-$('#score').html(score);
-var turn = 0;
-$('#time').html(turn);
-var currentColour = getRandomNumber(null);
-setNewColour();
-
-
+start();
 
 });
