@@ -2,17 +2,6 @@ $(document).ready(function(){
 
 // var cardContent = [
 // 	'<img src="http://placekitten.com/200/311" />',
-// 	'<img src="http://placekitten.com/201/320" />',
-// 	'<img src="http://placekitten.com/202/339" />',
-// 	'<img src="http://placekitten.com/203/348" />',
-// 	'<img src="http://placekitten.com/204/357" />',
-// 	'<img src="http://placekitten.com/205/366" />',
-// 	'<img src="http://placekitten.com/206/375" />',
-// 	'<img src="http://placekitten.com/207/384" />',
-// 	'<img src="http://placekitten.com/208/393" />',
-// 	'<img src="http://placekitten.com/209/302" />',
-// 	'<img src="http://placekitten.com/210/301" />',
-// 	'<img src="http://placekitten.com/211/300" /'
 // ]
 var cardContent = [
 	'<p>1</p>',
@@ -41,7 +30,6 @@ function Shuffle(o) {
 
 // Deal cards
 function DealCards() {
-
 	for (var i = 0; i < cardContent.length; i++) {
 		$(".card:eq(" + i + ")").html('<div class="flipper"><div class="backCard"></div>\
 				 					  <div class="frontCard">' + cardContent[i] + '</div></div>');

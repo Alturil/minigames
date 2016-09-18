@@ -1,0 +1,72 @@
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: rgb(6,136,0);
+	background-image:    radial-gradient(
+            rgb(6,136,0),
+            rgb(2,43,0)
+    );	
+}
+
+div {
+	box-sizing: border-box;	
+}
+
+main {
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+	flex-flow: column;
+	height: 100%;
+}
+
+h1 {
+	color: white;
+	font-weight: normal;
+	font-size: 5rem;
+	font-family: 'Fredoka One', cursive;
+	margin: 0;
+}
+
+#light {
+	border: 6px solid rgba(0,0,0,0.5);
+	width: 300px;
+	height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	margin: 2em 0;
+}
+
+.colour-red		{ background-color: red }
+.colour-yellow 	{ background-color: yellow }
+.colour-blue 	{ background-color: blue }
+
+#controls {
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+}
+
+div[class^="button"] {
+	border: 6px solid rgba(0,0,0,0.5);
+	width: 3em;
+	height: 3em;
+	margin: 0 1em;
+	padding: 0.5em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Fredoka One', cursive;
+	color: white;
+	text-shadow: 0 0 1px black, 0 0 1px black;
+}
+.button-red		{ background-color: red }
+.button-yellow	{ background-color: yellow }
+.button-blue	{ background-color: blue }
