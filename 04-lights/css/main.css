@@ -7,17 +7,9 @@ body, html {
 
 body {
 	background-color: rgb(6,136,0);
-<<<<<<< HEAD
 	background: radial-gradient(ellipse at center, #068800 0%, #022b00 100%);
     font-family: 'Spicy Rice', cursive;
-=======
-	background-image:    radial-gradient(
-            rgb(6,136,0),
-            rgb(2,43,0)
-    );	
-    font-family: 'Fredoka One', cursive;
     font-size: 180%;
->>>>>>> 8197406538228c2ce2742f54b55bc209f7bd8633
     color: white;
     text-shadow: 1px 1px 2px black;
 }
@@ -40,12 +32,8 @@ h1 {
 	width: 15rem;
 	height: 15rem;
 	border-radius: 50%;
-<<<<<<< HEAD
 	margin-bottom: 2em;	
 	box-shadow:	0 5px 20px rgba(0,0,0,1) inset;				
-=======
-	margin: 1em 0;
->>>>>>> 8197406538228c2ce2742f54b55bc209f7bd8633
 }
 
 .colour-red		{ background: radial-gradient(ellipse at center, #ff0505 0%,#6B0000 100%); }
