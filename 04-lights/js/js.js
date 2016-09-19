@@ -13,6 +13,9 @@ function getRandomNumber(current)
 {
 	var random = current;
 	while (random == current) {
+		// Math.random 				= Between 0 and 1
+		// availableClasses.length 	= Max (total classes)
+		// Math.floor				= Rounds downward to the nearest integer
 		random = Math.floor(Math.random() * (availableClasses.length) );
 	}	
 	return random;

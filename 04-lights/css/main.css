@@ -7,8 +7,17 @@ body, html {
 
 body {
 	background-color: rgb(6,136,0);
+<<<<<<< HEAD
 	background: radial-gradient(ellipse at center, #068800 0%, #022b00 100%);
     font-family: 'Spicy Rice', cursive;
+=======
+	background-image:    radial-gradient(
+            rgb(6,136,0),
+            rgb(2,43,0)
+    );	
+    font-family: 'Fredoka One', cursive;
+    font-size: 180%;
+>>>>>>> 8197406538228c2ce2742f54b55bc209f7bd8633
     color: white;
     text-shadow: 1px 1px 2px black;
 }
@@ -22,21 +31,21 @@ main {
 }
 
 h1 {	
-	font-weight: normal;
-	font-size: 5rem;	
+	font-weight: normal;	
 	margin: 0;
 }
 
 #light {
 	border: 6px solid rgba(0,0,0,0.5);
-	width: 200px;
-	height: 200px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	width: 15rem;
+	height: 15rem;
 	border-radius: 50%;
+<<<<<<< HEAD
 	margin-bottom: 2em;	
 	box-shadow:	0 5px 20px rgba(0,0,0,1) inset;				
+=======
+	margin: 1em 0;
+>>>>>>> 8197406538228c2ce2742f54b55bc209f7bd8633
 }
 
 .colour-red		{ background: radial-gradient(ellipse at center, #ff0505 0%,#6B0000 100%); }
@@ -87,6 +96,23 @@ h1 {
 	align-items: center;
 	justify-content: center;	
 	text-shadow: 0 0 1px black, 0 0 1px black;
+<<<<<<< HEAD
 	box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
 	cursor: pointer;
+=======
+}
+.button-red		{ background-color: red }
+.button-yellow	{ background-color: yellow }
+.button-blue	{ background-color: blue }
+
+#board {
+	margin: 1em 0;
+}
+#board p {
+	color: yellow;
+	margin: 0;
+}
+#board span {
+	color: white;
+>>>>>>> 8197406538228c2ce2742f54b55bc209f7bd8633
 }
