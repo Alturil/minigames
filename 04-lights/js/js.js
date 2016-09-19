@@ -27,7 +27,7 @@ function setNewColour()
 {	
 	currentColour = getRandomNumber(currentColour);	
 	changeColourClass(availableClasses[currentColour]);
-	$('#light').html(currentColour);
+	// $('#light').html(currentColour);
 }
 
 function updateUI()
