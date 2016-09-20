@@ -2,6 +2,7 @@ $(document).ready(function(){
 
 // <global variables>
 var availableClasses = [ 'colour-red', 'colour-yellow', 'colour-blue' ];
+var maxTime = 5;
 var currentColour;
 var score;
 var time;
@@ -21,7 +22,7 @@ function getRandomNumber(current)
 	return random;
 }
 
-function changeColourClass(newClass)
+function changeLightColour(newClass)
 {			
 	$('#light').attr('class', newClass);
 }
@@ -29,7 +30,7 @@ function changeColourClass(newClass)
 function setNewColour()
 {	
 	currentColour = getRandomNumber(currentColour);	
-	changeColourClass(availableClasses[currentColour]);
+	changeLightColour(availableClasses[currentColour]);
 	// $('#light').html(currentColour);
 }
 
@@ -38,6 +39,7 @@ function updateUI()
 	$('#score').html(score);
 	$('#time').html(time);
 	$('#score').html(score);
+	console.log("Updating... " + time);
 }
 
 function verifyHit(input)
@@ -55,12 +57,18 @@ function countDown()
 	{
 		time--;
 		updateUI();
+		console.log("Updated")
 	}	
 	if (time == 0)
-	{
+	{		
 		clearInterval(timer);
 		alert("Game over!");
 	}
+}
+
+function gameOver()
+{
+
 }
 // </functions>
 
@@ -86,9 +94,9 @@ function start()
 	score = 0;
 	currentColour = getRandomNumber(null);
 	setNewColour();	
-	time = 30;	
+	time = maxTime;	
 	timer = setInterval(countDown,1000);
-	updateUI();
+	updateUI();	
 }
 
 start();
