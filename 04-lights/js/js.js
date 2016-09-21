@@ -62,7 +62,7 @@ function countDown()
 	if (time == 0)
 	{		
 		clearInterval(timer);
-		alert("Game over!");
+		// alert("Game over!");
 	}
 }
 

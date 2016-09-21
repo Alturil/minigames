@@ -9,13 +9,21 @@
 	<script type="text/javascript" src="js/js.js"></script>
 </head>
 <body>
+<div class="overlay hidden">
+	<section class="popup">
+		<h2>Game Over!</h2>
+		<p>Final score: <span id="score-total">15</span></p>
+		<div class="button">Play again</div>
+	</section>
+</div>
+
 <main>
 	<h1>Lights!</h1>
 	<div id="light"></div>
 	<div id="controls">
-		<div class="button colour-red">A</div>
-		<div class="button colour-yellow">S</div>
-		<div class="button colour-blue">D</div>
+		<div class="action-button colour-red">A</div>
+		<div class="action-button colour-yellow">S</div>
+		<div class="action-button colour-blue">D</div>
 	</div>
 	<section id="dashboard">
 		<h2>Dashboard</h2>
